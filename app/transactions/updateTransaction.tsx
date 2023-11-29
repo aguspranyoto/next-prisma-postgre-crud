@@ -19,7 +19,7 @@ const UpdateProduct = ({
 }: {
   brands: Brand[];
   products: Product[];
-  transactions: Transaction;
+  transaction: Transaction;
 }) => {
   const [customerName, setCustomerName] = useState(transaction.customerName);
   const [amount, setAmount] = useState(transaction.amount);
