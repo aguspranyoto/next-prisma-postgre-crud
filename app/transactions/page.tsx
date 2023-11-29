@@ -3,6 +3,7 @@ import AddTransaction from "./addTransaction";
 import UpdateTransaction from "./updateTransaction";
 import DeleteTransaction from "./deleteTransaction";
 const prisma = new PrismaClient();
+import { headers } from "next/headers";
 
 export const revalidate = 0;
 
@@ -32,6 +33,7 @@ const getBrands = async () => {
 };
 
 const Transaction = async () => {
+  const headersList = headers();
   const [products, transactions, brands] = await Promise.all([
     getProducts(),
     getTransactions(),
