@@ -8,7 +8,7 @@ type Brand = {
   name: string;
 };
 
-const DeleteBrand = ({ brand }: { brand: Brand[] }) => {
+const DeleteBrand = ({ brand }: { brand: Brand }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 

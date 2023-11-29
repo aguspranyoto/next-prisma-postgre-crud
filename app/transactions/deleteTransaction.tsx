@@ -11,7 +11,7 @@ type Transaction = {
   productId: number;
 };
 
-const DeleteTransaction = ({ transaction }: { transaction: Transaction[] }) => {
+const DeleteTransaction = ({ transaction }: { transaction: Transaction }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 

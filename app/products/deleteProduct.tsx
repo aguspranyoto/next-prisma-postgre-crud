@@ -10,7 +10,7 @@ type Product = {
   brandId: number;
 };
 
-const DeleteProduct = ({ product }: { product: Product[] }) => {
+const DeleteProduct = ({ product }: { product: Product }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
