@@ -16,7 +16,6 @@ const getBrands = async () => {
 
 const Brand = async () => {
   const [brands] = await Promise.all([getBrands()]);
-  console.log(brands);
 
   return (
     <div>
