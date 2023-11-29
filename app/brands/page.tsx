@@ -4,6 +4,8 @@ import UpdateBrand from "./updateBrand";
 import DeleteBrand from "./deleteBrand";
 const prisma = new PrismaClient();
 
+export const revalidate = 0;
+
 const getBrands = async () => {
   const res = await prisma.brand.findMany({
     select: {

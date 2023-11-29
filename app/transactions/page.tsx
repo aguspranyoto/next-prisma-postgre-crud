@@ -4,6 +4,8 @@ import UpdateTransaction from "./updateTransaction";
 import DeleteTransaction from "./deleteTransaction";
 const prisma = new PrismaClient();
 
+export const revalidate = 0;
+
 const getTransactions = async () => {
   const res = await prisma.transaction.findMany({
     select: {

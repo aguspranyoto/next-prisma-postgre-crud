@@ -4,7 +4,7 @@ import UpdateProduct from "./updateProduct";
 import DeleteProduct from "./deleteProduct";
 const prisma = new PrismaClient();
 
-export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 const getProducts = async () => {
   const res = await prisma.product.findMany({
