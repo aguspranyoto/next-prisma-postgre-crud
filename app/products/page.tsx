@@ -3,7 +3,6 @@ import AddProduct from "./addProduct";
 import UpdateProduct from "./updateProduct";
 import DeleteProduct from "./deleteProduct";
 const prisma = new PrismaClient();
-import { headers } from "next/headers";
 
 export const revalidate = 0;
 
@@ -25,7 +24,6 @@ const getBrands = async () => {
 };
 
 const Product = async () => {
-  const headersList = headers();
   const [products, brands] = await Promise.all([getProducts(), getBrands()]);
 
   return (
